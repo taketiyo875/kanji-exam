@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7fb">
+  <meta name="description" content="常用漢字を学べる漢字テスト">
+  <title>常用漢字テスト</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="常用漢字テスト ホーム">
+        <span class="brand-mark" aria-hidden="true">漢</span>
+        <span>常用漢字テスト</span>
+      </a>
+      <span class="header-note">毎日コツコツ、漢字力アップ</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">KANJI STUDY</p>
+      <h1 id="page-title">漢字を、ひとつずつ。</h1>
+      <p class="hero-text">読み方を確認して、問題に挑戦しよう。</p>
+    </section>
+
+    <section class="panel" aria-labelledby="study-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">STUDY</p>
+          <h2 id="study-title">学習メニュー</h2>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <button class="menu-card" type="button" data-mode="reading">
+          <span class="menu-icon" aria-hidden="true">あ</span>
+          <span class="menu-title">漢字の読み</span>
+          <span class="menu-description">漢字を見て、読み方を答える</span>
+          <span class="menu-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="menu-card" type="button" data-mode="writing">
+          <span class="menu-icon" aria-hidden="true">漢</span>
+          <span class="menu-title">漢字の書き</span>
+          <span class="menu-description">読みを見て、漢字を答える</span>
+          <span class="menu-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="menu-card" type="button" data-mode="browse">
+          <span class="menu-icon" aria-hidden="true">本</span>
+          <span class="menu-title">漢字一覧</span>
+          <span class="menu-description">登録された漢字を検索する</span>
+          <span class="menu-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="panel quiz-panel" id="quiz-panel" aria-labelledby="quiz-title" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">CHALLENGE</p>
+          <h2 id="quiz-title">漢字クイズ</h2>
+        </div>
+        <button class="text-button" id="back-home" type="button">メニューに戻る</button>
+      </div>
+      <p class="status-message" id="quiz-status">出題データを準備しています。</p>
+      <div class="question-card" id="question-card" hidden>
+        <p class="question-label" id="question-label">次の漢字の読みは？</p>
+        <p class="question-character" id="question-character">漢</p>
+        <form id="answer-form">
+          <label class="sr-only" for="answer-input">答え</label>
+          <input id="answer-input" name="answer" type="text" autocomplete="off" placeholder="答えを入力" required>
+          <button class="primary-button" type="submit">答え合わせ</button>
+        </form>
+        <p class="feedback" id="answer-feedback" aria-live="polite"></p>
+        <button class="secondary-button" id="next-question" type="button" hidden>次の問題へ</button>
+      </div>
+    </section>
+
+    <section class="panel browse-panel" id="browse-panel" aria-labelledby="browse-title" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">KANJI LIST</p>
+          <h2 id="browse-title">漢字一覧</h2>
+        </div>
+        <button class="text-button" id="browse-back-home" type="button">メニューに戻る</button>
+      </div>
+      <label class="search-label" for="kanji-search">漢字・読みを検索</label>
+      <input id="kanji-search" type="search" placeholder="例：海、うみ">
+      <p class="status-message" id="browse-status">漢字データを読み込んでいます。</p>
+      <ul class="kanji-list" id="kanji-list"></ul>
+    </section>
+
+    <section class="notice" aria-label="データについて">
+      <span class="notice-mark" aria-hidden="true">i</span>
+      <p>漢字の掲載内容と読みは、参考資料を確認しながら整備します。未確認の読みを正解データとして登録しない方針です。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>常用漢字テスト · 学習用</p>
+  </footer>
+</body>
+</html>
